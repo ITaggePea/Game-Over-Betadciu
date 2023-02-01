@@ -1,0 +1,446 @@
+{
+	"song": {
+		"events": [
+			[
+				20756.7567567568,
+				[
+					[
+						"Change Stage",
+						"devilroom",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"devil-big"
+					],
+					[
+						"Change Character",
+						"gf",
+						"emptygf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-cuphead"
+					]
+				]
+			],
+			[
+				25945.9459459459,
+				[
+					[
+						"Change Stage",
+						"polus-new",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"black-new"
+					],
+					[
+						"Change Character",
+						"bf",
+						"impostor-new"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					]
+				]
+			],
+			[
+				36324.3243243243,
+				[
+					[
+						"Change Stage",
+						"too-slow",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sonicexe"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"fleetway-cam"
+					]
+				]
+			],
+			[
+				41513.5135135135,
+				[
+					[
+						"Change Stage",
+						"cant-run-xd",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"ycr"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"fleetway-cam"
+					]
+				]
+			],
+			[
+				51891.8918918919,
+				[
+					[
+						"Change Stage",
+						"triostage",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"beast-sonic"
+					],
+					[
+						"Change Character",
+						"gf",
+						"emptygf"
+					]
+				]
+			],
+			[
+				62270.2702702703,
+				[
+					[
+						"Change Stage",
+						"stage",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"dad"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-gfv2"
+					]
+				]
+			],
+			[
+				67459.4594594595,
+				[
+					[
+						"Change Stage",
+						"bedroom",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"stamps"
+					],
+					[
+						"Change Character",
+						"gf",
+						"emptygf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"sayori"
+					]
+				]
+			],
+			[
+				72648.6486486487,
+				[
+					[
+						"Change Stage",
+						"hall",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"niku-shaded"
+					],
+					[
+						"Change Character",
+						"bf",
+						"aldryx-shaded"
+					]
+				]
+			],
+			[
+				77837.8378378379,
+				[
+					[
+						"Change Stage",
+						"hell-meri",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"meri-evil"
+					],
+					[
+						"Change Character",
+						"gf",
+						"bop-scared"
+					],
+					[
+						"Change Character",
+						"bf",
+						"jhonn"
+					]
+				]
+			],
+			[
+				83027.027027027,
+				[
+					[
+						"Change Stage",
+						"tank",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"tankman"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"spooky"
+					]
+				]
+			],
+			[
+				88216.2162162162,
+				[
+					[
+						"Change Stage",
+						"genocide",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"tabi-crazy"
+					],
+					[
+						"Change Character",
+						"gf",
+						"emptygf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"agoti"
+					]
+				]
+			],
+			[
+				93405.4054054054,
+				[
+					[
+						"Change Stage",
+						"scarletbg",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"fuecoco"
+					],
+					[
+						"Change Character",
+						"gf",
+						"emptygf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"noob"
+					]
+				]
+			],
+			[
+				102648.648648649,
+				[
+					[
+						"Change Stage",
+						"cr-menu",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"blueking"
+					],
+					[
+						"Change Character",
+						"bf",
+						"noob"
+					]
+				]
+			],
+			[
+				106378.378378378,
+				[
+					[
+						"Change Character",
+						"bf",
+						"soul-eggman"
+					]
+				]
+			],
+			[
+				108972.972972973,
+				[
+					[
+						"Change Stage",
+						"mr-beast-beach",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"mr-beast"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"soul-eggman"
+					]
+				]
+			],
+			[
+				111081.081081081,
+				[
+					[
+						"Change Character",
+						"bf",
+						"shaggy"
+					]
+				]
+			],
+			[
+				114162.162162162,
+				[
+					[
+						"Change Stage",
+						"nonsense-room",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"nonsense"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"taeyai"
+					]
+				]
+			],
+			[
+				119351.351351351,
+				[
+					[
+						"Change Stage",
+						"bank",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"henry-angry"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"blantados-new"
+					]
+				]
+			],
+			[
+				123972.972972973,
+				[
+					[
+						"Change Stage",
+						"sunkStage",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"sunky-new"
+					],
+					[
+						"Change Character",
+						"gf",
+						"nogf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"blantados-new"
+					]
+				]
+			],
+			[
+				129081.081081081,
+				[
+					[
+						"Change Character",
+						"bf",
+						"sanic"
+					]
+				]
+			]
+		]
+	}
+}
