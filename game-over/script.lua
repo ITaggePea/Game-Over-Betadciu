@@ -362,26 +362,30 @@ function stepHit (step)
 		runTimer('reverseColorTween', 0.2)
     end
 
-    if curStep == 1529 then
-	   setProperty('sunkjump.alpha', 1)
-	   runTimer('sunkfade', 0.20)
+    if curStep == 1529 then --Sunky T
+--	   setProperty('sunkjump.alpha', 1)
+--	   runTimer('sunkfade', 0.20)
 
-        setProperty('bgS.alpha', 1)
+--        setProperty('bgS.alpha', 1)
 
-         noteTweenX("nota1", 4, 660, 0.5, cubeInOut)
-         noteTweenX("nota2", 5, 770, 0.5, cubeInOut)
-         noteTweenX("nota3", 6, 880, 0.5, cubeInOut)
-         noteTweenX("nota4", 7, 990, 0.5, cubeInOut)
-         noteTweenX("nota5", 0, 180, 0.5, cubeInOut)
-         noteTweenX("nota6", 1, 290, 0.5, cubeInOut)
-         noteTweenX("nota7", 2, 400, 0.5, cubeInOut)
-         noteTweenX("nota8", 3, 510, 0.5, cubeInOut)
+--         noteTweenX("nota1", 4, 660, 0.5, cubeInOut)
+--         noteTweenX("nota2", 5, 770, 0.5, cubeInOut)
+--         noteTweenX("nota3", 6, 880, 0.5, cubeInOut)
+--         noteTweenX("nota4", 7, 990, 0.5, cubeInOut)
+--         noteTweenX("nota5", 0, 180, 0.5, cubeInOut)
+--         noteTweenX("nota6", 1, 290, 0.5, cubeInOut)
+--         noteTweenX("nota7", 2, 400, 0.5, cubeInOut)
+--         noteTweenX("nota8", 3, 510, 0.5, cubeInOut)
+
+        setActorAlpha(0, 'boyfriend')
     end
 
-    if curStep == 1590 then
-        setProperty('explosionGood.alpha', 1)
-        objectPlayAnimation('explosionGood','idle',true)
-	   runTimer('explosionGoodFade', 4.25)
+    if curStep == 1592 then
+        setActorAlpha(0, 'boyfriend')
+
+        --setProperty('explosionGood.alpha', 1)
+        --objectPlayAnimation('explosionGood','idle',true)
+	   --runTimer('explosionGoodFade', 4.25)
     end
 
     if curStep == 1661 then

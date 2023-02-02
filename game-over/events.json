@@ -411,23 +411,28 @@
 				[
 					[
 						"Change Stage",
-						"sunkStage",
+						"vecindad",
 						""
 					],
 					[
 						"Change Character",
 						"dad",
-						"sunky-new"
+						"chavo2"
 					],
 					[
 						"Change Character",
 						"gf",
-						"nogf"
+						"emptygf"
 					],
 					[
 						"Change Character",
 						"bf",
 						"blantados-new"
+					],
+					[
+						"Asbel",
+						"2",
+						""
 					]
 				]
 			],
@@ -437,7 +442,7 @@
 					[
 						"Change Character",
 						"bf",
-						"sanic"
+						"quico"
 					]
 				]
 			]
