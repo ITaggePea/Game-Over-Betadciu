@@ -1,16 +1,61 @@
-function start (song)
-     addTheDamnSprites()
-	makeCharacters()
-
-     setProperty('ratingsAlpha', 0)
-end
 
 function onCreate()
-	makeLuaSprite('bg','backgrounds/pcport/assets/bg',0, -50)
-	setScrollFactor('bg', 0, 0)
-	setObjectCamera('bg', 'hud')
-	setProperty('bg.antialiasing', false)
-	addLuaSprite('bg',false)
+     makeLuaSprite('bg','backgrounds/pcport/assets/bg', 0, -50)
+     setScrollFactor('bg', 0, 0)
+     setObjectCamera('bg', 'hud')
+     setProperty('bg.antialiasing', false)
+     addLuaSprite('bg',false)
+end
+
+function start(song)
+	addTheDamnSprites()
+	makeCharacters()
+end
+
+function makeCharacters()
+	makeLuaCharacter('rodrigwell', 'rodrigwell', false, true)
+	setProperty('rodrigwell.x', getProperty('rodrigwell.x') - 1500)
+	setProperty('rodrigwell.alpha', 0);
+
+	makeLuaCharacter('miguel', 'miguel', true, false)
+	setProperty('miguel.x', getProperty('miguel.x') + 1800)
+	setProperty('miguel.y', getProperty('miguel.y') + 50)
+	setProperty('miguel.alpha', 0);
+
+	makeLuaCharacter('liquidtransition', 'liquid')
+	addEffect('liquidtransition', 'grayscale')
+	setProperty('liquidtransition.stopIdle',  true)
+	setObjectCamera('liquidtransition', 'hud')
+	characterZoom('liquidtransition', 1.1)
+	setProperty('liquidtransition.x', -400)
+	setProperty('liquidtransition.y', 1000)
+	setProperty('liquidtransition.angle', 5)
+	
+	makeLuaCharacter('ski', 'ski2', false, true)
+	setProperty('ski.x', getProperty('ski.x') - 1500)
+	setProperty('ski.y', getProperty('ski.y') - 100)
+	setProperty('ski.alpha', 0);
+
+	makeLuaCharacter('doll', 'p2doll', false, true)
+	setProperty('doll.x', getProperty('doll.x') + 1500)
+	setProperty('doll.y', getProperty('doll.y') - 250)
+	setProperty('doll.alpha', 0);
+
+	makeLuaCharacter('boyfriend1', 'solid-guitar', true)
+	setProperty('boyfriend1.alpha', 0)
+
+	makeLuaCharacter('jimmy', 'jimmy', true)
+	setProperty('jimmy.alpha', 0)
+
+	makeLuaCharacter('fakejim', 'jimunwell', true)
+	setProperty('fakejim.alpha', 0)
+
+	makeLuaCharacter('fakegf', 'gf-unwellis')
+	setProperty('fakegf.alpha', 0)
+
+	makeLuaCharacter('rocco', 'rocco', false, true)
+	setProperty('rocco.x', getProperty('rocco.x') - 1500)
+	setProperty('rocco.alpha', 0)
 end
 
 function addTheDamnSprites()
@@ -48,13 +93,6 @@ function addTheDamnSprites()
 
     scaleObject('P3StaticALT', 6, 6)
 
-    makeAnimatedLuaSprite('explosionGood','backgrounds/sonic/exe/Sanic/explosion',0,0)
-    addAnimationByPrefix('explosionGood','idle','Explosion_',24,false)
-    setObjectCamera('explosionGood', 'camOther')
-    scaleObject('explosionGood',2,2)
-    setProperty('explosionGood.alpha', 0)
-    addLuaSprite('explosionGood', true)
-
 	makeLuaSprite('poke','backgrounds/voltz/poke1',0, -500)
 	setScrollFactor('poke', 0, 0)
 	setObjectCamera('poke', 'hud')
@@ -69,17 +107,11 @@ function addTheDamnSprites()
 
      setObjectOrder('poke', getObjectOrder('poke2') + 1)
 
-
-	makeLuaSprite('white', '', 0, 0)
-	makeGraphic('white', 10, 10, 'FFFFFF')
-	scaleObject('white', 300, 300)
-	setProperty('white.alpha', 0)
-	setObjectOrder('white', getObjectOrder('strumLine') - 1)
-	setProperty('white.color', RGBColor(255,0,0))
-	setObjectCamera('white', 'other')
-	addLuaSprite('white')
-	setBlendMode('white', 'screen')
-
+	makeLuaSprite('blue', 'backgrounds/misc/BlueScreen', 0, 0)
+	setProperty('blue.alpha', 0)
+	addLuaSprite('blue', true)
+	screenCenter('blue')
+	setObjectCamera('blue', 'hud')
 
 	makeLuaSprite('bobjump', 'backgrounds/bob/bobscreen', 0, 0)
 	setProperty('bobjump.alpha', 0)
@@ -101,11 +133,11 @@ function addTheDamnSprites()
 	addLuaSprite('boom', true)
 	setProperty('boom.alpha', 0)
 
-	makeLuaSprite('sunkjump', 'backgrounds/sonic/exe/jumpscares/Sunky', 0, 0)
-	setProperty('sunkjump.alpha', 0)
-	addLuaSprite('sunkjump', true)
-	screenCenter('sunkjump')
-	setObjectCamera('sunkjump', 'hud')
+	makeAnimatedLuaSprite('takijump', 'backgrounds/taki/jumpscare', 0, 0)
+	addAnimationByPrefix('takijump', 'jump', 'jumpscare', 24, false)
+	setProperty('takijump.alpha', 0)
+	addLuaSprite('takijump', true)
+	setObjectCamera('takijump', 'hud')
 
 	makeLuaSprite('goldjump', 'backgrounds/hypno/gold/gold', 0, 0)
 	setProperty('goldjump.alpha', 0)
@@ -113,13 +145,10 @@ function addTheDamnSprites()
 	screenCenter('goldjump')
 	setObjectCamera('goldjump', 'hud')
 
-	makeLuaSprite('bgS','backgrounds/sonic/exe/sunky/4_3 shit',0, 0)
-	setScrollFactor('bgS', 0, 0)
-	setObjectCamera('bgS', 'other')
-	setProperty('bgS.antialiasing', false)
-	addLuaSprite('bgS',true)
-     setProperty('bgS.alpha', 0)
-
+	makeLuaSprite('platform', 'backgrounds/leghell/legacy_platform', -1500, 600);
+	addLuaSprite('platform')
+	setProperty('platform.alpha', 0)
+     scaleObject('platform', 0.75, 0.75);
 
 	for i = 1, 2 do
 		makeAnimatedLuaSprite('curtain'..i, 'backgrounds/misc/animatedcurtain', -475, -260)
@@ -130,7 +159,6 @@ function addTheDamnSprites()
 		setProperty('curtain'..i..'.antialiasing', true)
 		setScrollFactor('curtain'..i, 0.1, 0.1)
 		addLuaSprite('curtain'..i, true)
-	
 		
 		if i == 2 then
 			setProperty('curtain'..i..'.flipX', true)
@@ -140,30 +168,11 @@ function addTheDamnSprites()
 	end
 end
 
-function makeCharacters()
-	makeLuaCharacter('liquidtransition', 'liquid')
-	addEffect('liquidtransition', 'grayscale')
-	setProperty('liquidtransition.stopIdle',  true)
-	setObjectCamera('liquidtransition', 'hud')
-	characterZoom('liquidtransition', 1.1)
-	setProperty('liquidtransition.x', -400)
-	setProperty('liquidtransition.y', 1000)
-	setProperty('liquidtransition.angle', 5)
-	
-	makeLuaCharacter('boyfriend1', 'solid-guitar', true)
-	setProperty('boyfriend1.alpha', 0)
-
-	makeLuaCharacter('jimmy', 'jimmy', true)
-	setProperty('jimmy.alpha', 0)
-
-	makeLuaCharacter('fakejim', 'jimunwell', true)
-	setProperty('fakejim.alpha', 0)
-
-	makeLuaCharacter('fakegf', 'gf-unwellis')
-	setProperty('fakegf.alpha', 0)
-end
-
 function onTimerCompleted(t, tag, loops, loopsleft)
+	if t == 'bluefade' then
+		doTweenAlpha('byebye', 'blue', 0, 0.1, 'linear');
+	end
+
 	if t == 'bobfade' then
 		doTweenAlpha('byebye', 'bobjump', 0, 0.1, 'linear');
 	end
@@ -172,16 +181,13 @@ function onTimerCompleted(t, tag, loops, loopsleft)
 		doTweenAlpha('byebye', 'eggjump', 0, 0.1, 'linear');
 	end
 
-	if t == 'sunkfade' then
-		doTweenAlpha('byebye', 'sunkjump', 0, 0.1, 'linear');
+	if tag == 'takifade' then
+		setProperty('takijump.alpha', 0)
+		soundFadeOut('takijump', 1, 0)
 	end
 
 	if t == 'goldfade' then
 		doTweenAlpha('byebye', 'goldjump', 0, 0.1, 'linear');
-	end
-
-	if t == 'explosionGoodFade' then
-		doTweenAlpha('byebye', 'explosionGood', 0, 0.1, 'linear');
 	end
 
 	if tag == 'BfTweenX' then
@@ -198,13 +204,8 @@ function onTimerCompleted(t, tag, loops, loopsleft)
 	end
 end
 
-function onTweenCompleted(t, tag)
-	if string.match(t, 'D') then
-		local spr = t:sub(0, #t-4)
-		objectPlayAnimation(spr, 'closetostill', true)
-		runTimer('fullyclose', 0.1)
-	end
 
+function onTweenCompleted(t)
 	if string.match(t, 'curtain') then
 		local spr = t:sub(0, #t-4)
 		objectPlayAnimation(spr, 'closetostill', true)
@@ -217,20 +218,10 @@ function onTweenCompleted(t, tag)
 			setProperty('curtain'..i..'.alpha', 0)
 		end
 	end
-
-	if tag == 'TordbotTweenY' then
-		movinTordbot = false
-		cameraShake = false
-	end
-
-	if tag == 'colorTween' then
-		tweenColor('white', 0.2, RGBColor(255,216,0), RGBColor(255,255,255))
-	end
-
-	if tag == 'reverseColorTween' then
-		tweenColor('white', 0.2, RGBColor(255,216,0), RGBColor(255,0,0))
-	end
 end
+
+useDoubleDadIcons = false
+useDoubleBFIcons = false
 
 function onUpdate()
 	local currentBeat = (songPos / 1000)*(bpm/60)
@@ -241,11 +232,6 @@ function onUpdate()
 
     if (getProperty('boyfriend.animation.name') == 'idle' or getProperty('boyfriend.animation.name') == 'danceRight') and mustHit == true and stopFollow == false and (getProperty('boyfriend1.animation.name') == 'idle' or getProperty('boyfriend1.animation.name') == 'danceRight') then
         setCamFollow(xx2, yy2)
-    end
-
-	if cameraShake == true then
-        shakeCam(0.004, 0.01)
-		shakeHUD(0.004, 0.01)
     end
 
 	if getProperty('timeBar.color') ~= getColorFromHex(getProperty("dad.iconColor"):sub(3)) then
@@ -266,7 +252,25 @@ function onUpdate()
 			addClipRect('whiteScreen', 600+getProperty('liquidtransition.x'), 0, 3000, 3000)
 			addClipRect('fakegf', 0+getProperty('liquidtransition.x'), 0, 3000, 3000)
 			addClipRect('fakejim', -200+getProperty('liquidtransition.x'), 0, 3000, 3000)
-		end
+	 end
+
+	if useDoubleDadIcons then
+        setProperty('dadIcon1.scale.x', getProperty('iconP2.scale.x'))
+        setProperty('dadIcon1.scale.y', getProperty('iconP2.scale.y'))
+	   setProperty('dadIcon1.animation.curAnim.curFrame', getProperty('iconP2.animation.curAnim.curFrame'))
+        setProperty('dadIcon1.x', getProperty('iconP2.x') - 60)
+        setProperty('dadIcon1.y', getProperty('iconP2.y') - 50)
+        setProperty('dadIcon1.alpha', 1)
+    end
+
+    if useDoubleBFIcons then
+        setProperty('bfIcon1.scale.x', getProperty('iconP1.scale.x'))
+        setProperty('bfIcon1.scale.y', getProperty('iconP1.scale.y'))
+        setProperty('bfIcon1.animation.curAnim.curFrame', getProperty('iconP1.animation.curAnim.curFrame'))
+        setProperty('bfIcon1.x', getProperty('iconP1.x') + 75)
+        setProperty('bfIcon1.y', getProperty('iconP1.y') - 50)
+        setProperty('bfIcon1.alpha', 1)
+    end
 end
 
 daFrame = 0
@@ -424,9 +428,15 @@ function stepHit (step)
     end
 
     if curStep == 896 then
+	   setProperty('blue.alpha', 1)
+	   runTimer('bluefade', 0.25)
+	   playSound('blue-screen')
+
         setProperty('boyfriend.doMissThing', false)
         setProperty('boyfriend.stopIdle', false)
         setProperty('boyfriend.color', RGBColor(80,95,164,164))
+
+	   changeNotesAndTextures('normal')
     end
 
     if curStep == 958 then
@@ -435,27 +445,32 @@ function stepHit (step)
 
     if curStep == 960 then
         fadeCamPsych('hud', '0xff000000', 1, true, true)
-	   changeNotesAndTextures('ronsip')
     end
 
     if curStep == 1024 then
         cameraFlash('game', '0xFFFFFFFF', 0.7)
-	   changeNotesAndTextures('normal')
+	   changeNotesDad('normal')
+	   changeNotesBF('normal')
     end
 
-    if curStep == 1085 then
-        fadeCamPsych('hud', '0xff000000', 1, false, false)
-    end
+    if curStep == 1086 then
+	   setObjectOrder('rodrigwell', getObjectOrder('dad') + 1)
+        setProperty('rodrigwell.alpha', 1);
+        doTweenX('rodrigwellX', 'rodrigwell', getProperty('dad.x') - 175, 0.5)
 
-    if curStep == 1087 then
-        fadeCamPsych('hud', '0xff000000', 1, true, true)
-	   changeNotesDad('tabi')
-	   changeNotesBF('agoti')
+	   setObjectOrder('miguel', getObjectOrder('boyfriend') + 1)
+        setProperty('miguel.alpha', 1);
+        doTweenX('miguelX', 'miguel', getProperty('boyfriend.x') + 475, 0.5)
+
+	   changeDadIcon('rodrigwell')
+	   changeBFIcon('miguel')
+	   updateHealthbar(getProperty('rodrigwell.iconColor'), getProperty('miguel.iconColor'))
+	   
+        setProperty('defaultCamZoom', 0.75)
     end
 
     if curStep == 1141 then
 	   doTweenY('pokeY', 'poke', getProperty('poke.y') + 500, (stepCrochet*5)/850, 'InOut')
-
 	   doTweenY('poke2Y', 'poke2', getProperty('poke2.y') - 600, (stepCrochet*5)/850, 'InOut')
 
         setProperty('poke.alpha', 1)
@@ -464,10 +479,10 @@ function stepHit (step)
 
     if curStep == 1152 then
 	   doTweenY('pokeY', 'poke', getProperty('poke.y') - 500, (stepCrochet*5)/850, 'InOut')
-
 	   doTweenY('poke2Y', 'poke2', getProperty('poke2.y') + 600, (stepCrochet*5)/850, 'InOut')
 
-	   changeNotesAndTextures('normal')
+        setProperty('rodrigwell.alpha', 0);
+        setProperty('miguel.alpha', 0);
     end
 
     if curStep == 1262 then
@@ -511,19 +526,21 @@ function stepHit (step)
     end
 
     if curStep == 1470 then
-		playSound('warpsound')
-		tweenColor('white', 0.2, RGBColor(255,0,0), RGBColor(255,216,0))
-		runTimer('colorTween', 0.2)
+		playSound('takijump', 0.8, 'takijump')
+		setProperty('takijump.alpha', 1)
+		runTimer('takifade', 0.2)
 
-		setProperty('white.alpha', 0.4)
+          changeNotesAndTextures('normal')
     end
 
-    if curStep == 1471 then
-		doTweenAlpha('whatever', 'white', 0, 0.7)
-		tweenColor('white', 0.2, RGBColor(255,255,255), RGBColor(255,216,0))
-		runTimer('reverseColorTween', 0.2)
+    if curStep == 1472 then
+		setProperty('takijump.alpha', 0)
     end
 
+    if curStep == 1536 then
+        cameraFlash('game', '0xFFFFFFFF', 0.7)
+        setActorAlpha(0, 'boyfriend')
+    end
 
     if curStep == 1592 then
         setActorAlpha(0, 'boyfriend')
@@ -560,47 +577,54 @@ function stepHit (step)
 	   setProperty('bobjump.alpha', 1)
 	   runTimer('bobfade', 0.25)
         playSound('bobjumpscare')
-        changeStage('run')
-        changeDadAuto('hellbob')
-        changeGFAuto('nogf')
+        changeStage('run-pov')
+        changeDadAuto('bob-pov')
         changeBFAuto('littleman')
+        setActorAlpha(0, 'boyfriend')
+        setActorAlpha(0, 'gf')
     end
 
-    if curStep == 1791 then
+    if curStep == 1792 then
 	   setProperty('goldjump.alpha', 1)
 	   runTimer('goldfade', 0.25)
         playSound('goldjumpscare')
-        changeStage('no')
-        changeDadAuto('gold')
-        changeBFAuto('bf-gf-lullaby')
-        setActorAlpha(0, 'gf')
+
         setActorAlpha(0, 'boyfriend')
     end
 
-    if curStep == 1854 then
-        fadeCamPsych('hud', '0xff000000', 1, true, true)
-    end
-
     if curStep == 1856 then
-        changeStage('talentless-sky')
-        changeDadAuto('sky2')
-        changeGFAuto('nogf')
-        changeBFAuto('ski')
-    end
+	   setProperty('ski.alpha', 1);
+        changeBFAuto('sky2')
+        setActorAlpha(0, 'boyfriend')
+        characterZoom('ski', 0.75)
 
-    if curStep == 1918 then
-        fadeCamPsych('hud', '0xff000000', 1, false, false)
+	   setObjectOrder('platform', getObjectOrder('dad') - 1)
+        doTweenX('platformX', 'platform', getProperty('dad.x') - 435, 0.5)
+	   setProperty('platform.alpha', 1)
+	   setObjectOrder('ski', getObjectOrder('platform') + 1)
+
+	   setObjectOrder('ski', getObjectOrder('dad') - 1)
+        doTweenX('skiX', 'ski', getProperty('dad.x') - 425, 0.5)
+
+	   changeDadIcon('ski')
+	   updateHealthbar(getProperty('ski.iconColor'), getProperty('boyfriend.iconColor'))
     end
 
     if curStep == 1920 then
-        fadeCamPsych('hud', '0xff000000', 1, true, true)
-        changeStage('philly-neo')
-        changeDadAuto('neonight-cam')
-        changeGFAuto('nogf')
-        changeBFAuto('bf-sharv')
+	   setProperty('doll.alpha', 1);
+        changeBFAuto('majin-new')
+        characterZoom('doll', 0.75)
+        setActorAlpha(0, 'boyfriend')
+
+	   setObjectOrder('doll', getObjectOrder('dad') - 1)
+        doTweenX('dollX', 'doll', getProperty('dad.x') + 250, 0.5)
+
+	   changeDadIcon('tdoll')
+	   updateHealthbar(getProperty('doll.iconColor'), getProperty('boyfriend.iconColor'))
     end
 
     if curStep == 1984 then
+	   cameraFlash('hud', '0xFFFFFF', 1, true)
 	   changeStage('mspaintvoid')
 	   changeDadAuto('eduardo')
 	   changeGFAuto('gf-unwellis')
@@ -609,6 +633,10 @@ function stepHit (step)
 	   addEffect('dad', 'grayscale')
 	   addEffect('iconP2', 'grayscale')
 	   addEffect('healthBar', 'grayscale')
+
+	   setProperty('ski.alpha', 0);
+	   setProperty('doll.alpha', 0);
+	   setProperty('platform.alpha', 0)
 	end
 
 	if curStep == 2009 then
@@ -701,27 +729,27 @@ function stepHit (step)
         updateHealthbar(getProperty('dad.iconColor', 'boyfriend1.iconColor'))
     end
 
-     if curStep == 2222 then
-         fadeCamPsych('hud', '0xff000000', 1, false, false)
-     end
-
     if curStep == 2224 then
-        fadeCamPsych('hud', '0xff000000', 1, true, true)
-        changeStage('room-b3')
-        changeDadAuto('shaya-vampire')
-        changeGFAuto('emptygf')
-        changeBFAuto('garcello')
-    end
+	   doTweenX('roccoX', 'rocco', getProperty('dad.x') + 100, (stepCrochet*4)/1000, 'backout')
+	   setProperty('rocco.alpha', 1)
+	   setProperty('rocco.y', getProperty('dad.y'))
+	   setObjectOrder('rocco', getObjectOrder('dad') - 1)
 
-    if curStep == 2238 then
-        fadeCamPsych('hud', '0xff000000', 1, false, false)
-    end
+        useDoubleDadIcons = true
+        makeHealthIcon('dadIcon1', 'Rocco1', true)
+        setObjectOrder('dadIcon1', getObjectOrder('iconP2') + 1)
+        setProperty('dadIcon1.flipX', true)
 
-    if curStep == 2240 then
-        fadeCamPsych('hud', '0xff000000', 1, true, true)
-        changeBFAuto('bf-b3-room')
+        changeBFAuto('elg-no-lua')
+	   setProperty('boyfriend.x', getProperty('boyfriend.x') - 250)
+
+        useDoubleBFIcons = true
+        makeHealthIcon('bfIcon1', 'solid', true)
+        setObjectOrder('bfIcon1', getObjectOrder('iconP1') + 1)
+        setObjectOrder('boyfriend1', getObjectOrder('boyfriend') + 1)
     end
 end
+
 
 function changeNotesAndTextures(skin)
 	for i = 0,7 do
@@ -778,6 +806,46 @@ function changeNotesBF(skin)
 end
 
 sDir = {'singLEFT', 'singDOWN', 'singUP', 'singRIGHT'}
+dadAlt = ""
+
+function dadNoteHit(note, isSustain, noteType, dType)
+	if getProperty('health') > 0.1 and getProperty('boyfriend.curCharacter') == 'fleet-sonic' then    
+        setProperty('health',  getProperty('health') - 0.03);
+    end
+
+	if dType == 0 then
+		playDadSing = true
+		if getProperty('dad.curCharacter') == 'bendy-da' then
+
+			if isSustain == false then
+				playActorAnimation('dad', sDir[note + 1].. dadAlt, true, false)
+			end
+		else
+			playActorAnimation('dad', sDir[note + 1], true, false)
+		end
+	
+		setProperty('dad.holdTimer', 0)
+
+	elseif dType == 1 then
+		playDadSing = false
+		playActorAnimation('rodrigwell', sDir[note + 1], true, false)
+		setProperty('rodrigwell.holdTimer', 0)
+
+		playActorAnimation('ski', sDir[note + 1], true, false)
+		setProperty('ski.holdTimer', 0)
+
+	elseif dType == 2 then
+		playDadSing = false
+		playActorAnimation('doll', sDir[note + 1], true, false)
+		setProperty('doll.holdTimer', 0)
+
+	elseif dType == 3 then
+		playDadSing = true
+
+		playActorAnimation('rocco', sDir[note + 1], true, false)
+		setProperty('rocco.holdTimer', 0)
+	end
+end
 
 function bfNoteHit(note, isSustain, noteType, dType)
 	if dType == 0 then
@@ -794,6 +862,15 @@ function bfNoteHit(note, isSustain, noteType, dType)
 		setProperty('boyfriend.holdTimer', 0)
 	elseif dType == 1 then
 		playBFSing = false
+            playActorAnimation('miguel', sDir[note + 1], true, false)
+            setProperty('miguel.holdTimer', 0)
+
+            playActorAnimation('boyfriend1', sDir[note + 1], true, false)
+            setProperty('boyfriend1.holdTimer', 0)
+
+	elseif dType == 3 then
+		playBFSing = true
+
             playActorAnimation('boyfriend1', sDir[note + 1], true, false)
             setProperty('boyfriend1.holdTimer', 0)
 	end
