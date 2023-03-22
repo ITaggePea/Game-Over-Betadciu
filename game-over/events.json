@@ -196,38 +196,13 @@
 				[
 					[
 						"Change Stage",
-						"hell-meri",
+						"cloud",
 						""
 					],
 					[
 						"Change Character",
 						"dad",
-						"meri-evil"
-					],
-					[
-						"Change Character",
-						"gf",
-						"bop-scared"
-					],
-					[
-						"Change Character",
-						"bf",
-						"jhonn"
-					]
-				]
-			],
-			[
-				83027.027027027,
-				[
-					[
-						"Change Stage",
-						"tank",
-						""
-					],
-					[
-						"Change Character",
-						"dad",
-						"tankman"
+						"cloud"
 					],
 					[
 						"Change Character",
@@ -237,32 +212,7 @@
 					[
 						"Change Character",
 						"bf",
-						"spooky"
-					]
-				]
-			],
-			[
-				88216.2162162162,
-				[
-					[
-						"Change Stage",
-						"genocide",
-						""
-					],
-					[
-						"Change Character",
-						"dad",
-						"tabi-crazy"
-					],
-					[
-						"Change Character",
-						"gf",
-						"emptygf"
-					],
-					[
-						"Change Character",
-						"bf",
-						"agoti"
+						"2vplus-senpai"
 					]
 				]
 			],
@@ -326,13 +276,13 @@
 				[
 					[
 						"Change Stage",
-						"mr-beast-beach",
+						"cgstage",
 						""
 					],
 					[
 						"Change Character",
 						"dad",
-						"mr-beast"
+						"cg"
 					],
 					[
 						"Change Character",
@@ -352,7 +302,7 @@
 					[
 						"Change Character",
 						"bf",
-						"shaggy"
+						"sans-i"
 					]
 				]
 			],
@@ -386,13 +336,13 @@
 				[
 					[
 						"Change Stage",
-						"bank",
+						"taki",
 						""
 					],
 					[
 						"Change Character",
 						"dad",
-						"henry-angry"
+						"taki"
 					],
 					[
 						"Change Character",
@@ -402,12 +352,12 @@
 					[
 						"Change Character",
 						"bf",
-						"blantados-new"
+						"sarvente"
 					]
 				]
 			],
 			[
-				123972.972972973,
+				124540,
 				[
 					[
 						"Change Stage",
@@ -427,7 +377,7 @@
 					[
 						"Change Character",
 						"bf",
-						"blantados-new"
+						"sarvente"
 					],
 					[
 						"Asbel",
@@ -443,6 +393,31 @@
 						"Change Character",
 						"bf",
 						"quico"
+					]
+				]
+			],
+			[
+				145297.297297297,
+				[
+					[
+						"Change Stage",
+						"no",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"gold"
+					],
+					[
+						"Change Character",
+						"gf",
+						"emptygf"
+					],
+					[
+						"Change Character",
+						"bf",
+						"bf-gf-lullaby"
 					]
 				]
 			]

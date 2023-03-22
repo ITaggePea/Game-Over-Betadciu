@@ -14,14 +14,8 @@
 48 normal bf
 52 stamps dad
 52 doki bf
-56 agoti dad
-56 agoti bf
-60 ronsip dad
-60 ronsip bf
-64 normal dad
-64 normal bf
-68 tabi dad
-68 agoti bf
+56 normal dad
+56 normal bf
 72 normal dad
 72 normal bf
 80 normal dad
